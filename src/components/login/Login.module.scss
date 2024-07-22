@@ -8,9 +8,10 @@ $radius: 8px;
   border-radius: $radius;
 
   button[type="submit"] {
-    background-color: #747bff;
+    background-color: #1ae02a;
     color: #fff;
     width: 100%;
+    color: black;
   }
 }
 
@@ -25,6 +26,7 @@ $radius: 8px;
   input {
     $radius: 4px;
 
+    padding: 0.8em;
     display: block;
     width: 100%;
     border-radius: $radius;
@@ -34,4 +36,5 @@ $radius: 8px;
 
 .error {
   color: red;
+  font-weight: 700;
 }

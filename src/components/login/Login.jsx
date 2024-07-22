@@ -53,11 +53,15 @@ export default function Login() {
 
   return (
     <div className={styles.login}>
-      <h2>Log In</h2>
+
+      <h2>Sign In</h2>
+
       <form onSubmit={handleSubmit}>
+
         <div className={styles["form-control"]}>
-          <label htmlFor='userName'>Username</label>
+          
           <input
+            placeholder="User Name"
             type='text'
             value={userName}
             id='userName'
@@ -65,9 +69,11 @@ export default function Login() {
             onChange={(e) => setUserName(e.target.value)}
           />
         </div>
+
         <div className={styles["form-control"]}>
-          <label htmlFor='password'>Password</label>
+          {/* <label htmlFor='password'>Password</label> */}
           <input
+            placeholder="Password"
             type='password'
             value={password}
             id='password'
@@ -77,10 +83,13 @@ export default function Login() {
         </div>
 
         {error && <p className={styles.error}>Error: {error.message}</p>}
+
         <div>
+
           <button type='submit' disabled={loading}>
             {loading ? "Loading..." : "Submit"}
           </button>
+
         </div>
       </form>
     </div>

@@ -11,7 +11,7 @@ import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <header>
         <nav>
           <ul>
@@ -26,7 +26,7 @@ function App() {
             </li>
             
           </ul>
-
+          
           <LogoutButton>Log out</LogoutButton>
         </nav>
       </header>
@@ -38,7 +38,6 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route path='/today' element={<Today />} />
           </Route>
-
 
           <Route path='/login' element={<Login />} />
         </Routes>

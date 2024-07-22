@@ -28,7 +28,7 @@ export default function LogoutButton({ children }) {
   return (
     <button
       onClick={logOut}
-      style={{ color: "red", borderColor: "currentcolor" }}
+      style={{ color: "red", backgroundColor:"inherit" }}
     >
       {children}
     </button>
