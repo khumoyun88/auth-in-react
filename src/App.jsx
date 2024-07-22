@@ -1,12 +1,12 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import "./App.scss";
-import Dashboard from "./components/dashboard/Dashboard";
+// import Dashboard from "./components/dashboard/Dashboard";
 import Login from "./components/login/Login";
 import Home from "./components/home/Home";
-import Students from "./components/students/Students";
+// import Students from "./components/students/Students";
 import LogoutButton from "./components/logout-button/LogoutButton";
-import About from "./components/about/About";
+import Today from "./components/today/Today";
 import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 
 function App() {
@@ -19,14 +19,12 @@ function App() {
               <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/about'>About</NavLink>
+              <NavLink to='/today'>Today</NavLink>
             </li>
             <li>
-              <NavLink to='/dashboard'>Dashboard</NavLink>
+              <NavLink to='/login'>Log In</NavLink>
             </li>
-            <li>
-              <NavLink to='/students'>Students</NavLink>
-            </li>
+            
           </ul>
 
           <LogoutButton>Log out</LogoutButton>
@@ -36,14 +34,11 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
+          
           <Route element={<ProtectedRoute />}>
-            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/today' element={<Today />} />
           </Route>
 
-          <Route element={<ProtectedRoute />}>
-            <Route path='/students' element={<Students />} />
-          </Route>
 
           <Route path='/login' element={<Login />} />
         </Routes>
