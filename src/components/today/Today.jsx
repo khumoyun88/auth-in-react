@@ -1,8 +1,12 @@
+import "./today.scss";
+
+
 export default function About() {
+
     return (
       <div>
         <h2>Tasks</h2>
-        <div style={{width:"100%"}}>
+        <div className="tasks" >
           <h2>Tasks</h2>
 
           <input type="text" />
